@@ -1,0 +1,26 @@
+{
+  "name": "dom",
+  "version": "1.0.0",
+  "description": "DOM Practice",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuraSadilenko/JS_DOM.git"
+  },
+  "author": "Yura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuraSadilenko/JS_DOM/issues"
+  },
+  "homepage": "https://github.com/YuraSadilenko/JS_DOM#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-server-livereload": "^1.9.2"
+  },
+  "dependencies": {}
+}
