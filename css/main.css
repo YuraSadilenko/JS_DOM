@@ -1,2 +1,16 @@
+.first-btn {
+  margin-bottom: 2rem; }
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 2rem; }
+
 td {
-  border: 1px solid black; }
+  text-align: center;
+  border: 1px solid black;
+  width: 20px;
+  background-color: aliceblue; }
+
+.span-item {
+  background-color: #c70042;
+  font-size: 3rem; }
