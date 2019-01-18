@@ -1,19 +1,3 @@
-
-// function createSpan() {
-//   var block = document.getElementById('span-box');
-//   var span = document.createElement('span');
-//   if (span !== null) {
-//     block.appendChild(span);
-//   } else if (span){
-//     console.log('Error');
-//   } 
-// }
-
-// createSpan();
-// createSpan();
-// createSpan();
-
-
 function createSpanInBlockByID(blockId) {
   var block = document.getElementById(blockId);
   var isSpan = block.getElementsByTagName('span');
