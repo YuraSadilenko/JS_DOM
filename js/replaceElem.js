@@ -1,9 +1,7 @@
 function replaceElementBy(blockCurrent, blockToReplace) {
-  var parent = document.getElementById('replace-block');
-  blockCurrent = parent.getElementsByTagName('span');
-  var div = document.createElement('div');
-  if (blockCurrent) {
-    parent.removeChild('span');
-    div.className = 'new_div';
-  }
+  var block = document.querySelector(blockCurrent);
+  var newBlock = document.createElement(blockToReplace);
+  block.parentNode.replaceChild(newBlock, block);
+  newBlock.classList.add('div-block');
+  newBlock.innerHTML = 'new block';
 }
