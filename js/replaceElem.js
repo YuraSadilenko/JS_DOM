@@ -1,5 +1,5 @@
 function replaceElementBy(blockCurrent, blockToReplace) {
-  var block = document.querySelector(blockCurrent);
+  var block = document.getElementById(blockCurrent);
   var newBlock = document.createElement(blockToReplace);
   block.parentNode.replaceChild(newBlock, block);
   newBlock.classList.add('div-block');
