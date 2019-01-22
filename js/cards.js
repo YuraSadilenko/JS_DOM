@@ -39,3 +39,14 @@ const ANCESTRY_FILE = [
   {"name": "Maria Sturm", "sex": "f", "born": 1835, "died": 1917, "father": "Charles Sturm", "mother": "Seraphina Spelier"},
   {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
 ];
+
+function createCards() {
+  for (var i = 0; i < ANCESTRY_FILE.length; i++) {
+    var block = document.createElement('div');
+    var body = document.querySelector('body');
+    block.innerText = ANCESTRY_FILE[i];
+    body.appendChild(block);
+    console.log(ANCESTRY_FILE[i]);
+  }
+}
+createCards();
