@@ -40,13 +40,55 @@ const ANCESTRY_FILE = [
   {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
 ];
 
-function createCards() {
-  for (var i = 0; i < ANCESTRY_FILE.length; i++) {
-    var block = document.createElement('div');
-    var body = document.querySelector('body');
-    block.innerText = ANCESTRY_FILE[i];
-    body.appendChild(block);
-    console.log(ANCESTRY_FILE[i]);
+function createCards(object) {
+  var block = document.createElement('div');
+  block.style.display = 'flex';
+  block.style.flexDirection = 'row';
+
+  block.style.justifyContent = 'space-around';
+  block.style.flexWrap = 'wrap';
+  document.body.appendChild(block);
+
+  for (var i = 0; i < object.length; i++) {
+    var div = document.createElement('div');
+    div.style.boxShadow = "5px 5px 10px rgba(0,0,0,.2)";
+    div.style.backgroundColor = '#f9f1a8';
+    div.style.width = '20%';
+    div.style.padding = '20px';
+    div.style.marginBottom = '20px';
+    block.appendChild(div);
+    console.log(object[i]);
+
+    var name = document.createElement('p');
+    name.innerText = 'Name: ' + object[i].name;
+    name.style.textAlign = 'center';
+    div.appendChild(name);
+
+    var sex = document.createElement('p');
+    sex.innerText = 'Sex: ' + object[i].sex;
+    sex.style.textAlign = 'center';
+    div.appendChild(sex);
+
+    var born = document.createElement('p');
+    born.innerText = 'Born: ' + object[i].born;
+    born.style.textAlign = 'center';
+    div.appendChild(born);
+
+    var died = document.createElement('p');
+    died.innerText = 'Died: ' + object[i].died;
+    died.style.textAlign = 'center';
+    div.appendChild(died);
+
+    var father = document.createElement('p');
+    father.innerText = 'Father: ' + object[i].father;
+    father.style.textAlign = 'center';
+    div.appendChild(father);
+
+    var mother = document.createElement('p');
+    mother.innerText = 'Mother: ' + object[i].mother;
+    mother.style.textAlign = 'center';
+    div.appendChild(mother);
   }
 }
-createCards();
+
+createCards(ANCESTRY_FILE);
