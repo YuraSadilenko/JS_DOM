@@ -40,7 +40,7 @@ const ANCESTRY_FILE = [
   {"name": "Jacobus Bernardus van Brussel", "sex": "m", "born": 1736, "died": 1809, "father": "Jan van Brussel", "mother": "Elisabeth Haverbeke"}
 ];
 
-function createCards(object) {
+function createCards(array) {
   var block = document.createElement('div');
   block.style.display = 'flex';
   block.style.flexDirection = 'row';
@@ -49,7 +49,7 @@ function createCards(object) {
   block.style.flexWrap = 'wrap';
   document.body.appendChild(block);
 
-  for (var i = 0; i < object.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     var div = document.createElement('div');
     div.style.boxShadow = "5px 5px 10px rgba(0,0,0,.2)";
     div.style.borderRadius = '10px';
@@ -57,39 +57,38 @@ function createCards(object) {
     div.style.width = '20%';
     div.style.padding = '20px';
     div.style.marginBottom = '20px';
-    div.style
     block.appendChild(div);
-    console.log(object[i]);
+    console.log(array[i]);
 
     var name = document.createElement('p');
-    name.innerText = 'Name: ' + object[i].name + ';';
+    name.innerText = 'Name: ' + array[i].name + ';';
     name.style.textAlign = 'center';
     name.style.fontWeight = '900';
     name.style.fontSize = '22px';
     div.appendChild(name);
 
     var sex = document.createElement('p');
-    sex.innerText = 'Sex: ' + object[i].sex + ';';
+    sex.innerText = 'Sex: ' + array[i].sex + ';';
     sex.style.textAlign = 'center';
     div.appendChild(sex);
 
     var born = document.createElement('p');
-    born.innerText = 'Born: ' + object[i].born + ';';
+    born.innerText = 'Born: ' + array[i].born + ';';
     born.style.textAlign = 'center';
     div.appendChild(born);
 
     var died = document.createElement('p');
-    died.innerText = 'Died: ' + object[i].died + ';';
+    died.innerText = 'Died: ' + array[i].died + ';';
     died.style.textAlign = 'center';
     div.appendChild(died);
 
     var father = document.createElement('p');
-    father.innerText = 'Father: ' + object[i].father + ';';
+    father.innerText = 'Father: ' + array[i].father + ';';
     father.style.textAlign = 'center';
     div.appendChild(father);
 
     var mother = document.createElement('p');
-    mother.innerText = 'Mother: ' + object[i].mother + ';';
+    mother.innerText = 'Mother: ' + array[i].mother + ';';
     mother.style.textAlign = 'center';
     div.appendChild(mother);
   }
@@ -119,11 +118,11 @@ function createCards(object) {
   var middleFemaleAge = document.createElement('p');
   middleFemaleAge.innerText = 'Average female age: ' + calculateMiddleAge(ANCESTRY_FILE, 'f') + ' years';
   summaryBlock.appendChild(middleFemaleAge);
-};
+}
 
 function calculateAge(person) {
   return person.died - person.born;
-};
+}
 
 function calculateDifference(object) {
   var sum = 0;
@@ -141,7 +140,7 @@ function calculateDifference(object) {
     }
   }
   return Math.round(sum / count);
-};
+}
 
 function calculateMiddleAge(object, sex) {
   var sum = 0;
@@ -153,6 +152,6 @@ function calculateMiddleAge(object, sex) {
     }
   }
   return Math.round(sum / count);
-};
+}
 
 createCards(ANCESTRY_FILE);
